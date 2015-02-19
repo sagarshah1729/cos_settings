@@ -123,8 +123,16 @@
 
         <activity android:name=".Settings$WirelessSettings"
             android:label="@string/header_category_wireless_networks">
-            <intent-filter android:priority="4">
+            <intent-filter android:priority="5">
                 <action android:name="com.android.settings.category.wireless" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Settings$COSSettings"
+            android:label="@string/keywords_cos">
+            <intent-filter android:priority="4">
+                <action android:name="com.android.settings.category.cos" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -172,6 +180,39 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+       <!-- Galaxy -->
+        <activity android:name="Settings$COSSettingsActivity"
+                android:label="@string/cos_settings_title"
+                android:icon="@drawable/ic_galaxy"
+                android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="3">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.cos" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cos.ProcessStatsSummary" />
+        </activity>
+ 
+       <!-- Keep compatibility with old shortcuts. -->
+        <activity android:name="Settings$COSSettingsActivity"
+                  android:label="@string/cos_settings_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cos.AdditionalSettings" />
+        </activity>
+
+        <activity
+             android:name=".cos.AdditionalSettings" />
 
         <!-- Wireless Controls -->
 

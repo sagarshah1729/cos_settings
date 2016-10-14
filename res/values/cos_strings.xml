@@ -16,3 +16,9 @@
 
     <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
+
+    <!-- Cosmic-OS build date-->
+    <string name="build_date">Cosmic-OS Build Date</string>
+    <string name="build_date_default">2014-01-01-0000</string>
+
+</resources>

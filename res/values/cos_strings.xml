@@ -18,7 +18,8 @@
     <string name="bluetooth_accept_all_files">Accept all file types</string>
 
     <!-- Cosmic-OS -->
-    <string name="cos_version">Cosmic-OS Build</string>
+    <string name="cos_version_default">Cosmic-OS Build</string>
+    <string name="cos_version">BETA</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
     <string name="build_date">Cosmic-OS Build Date</string>
